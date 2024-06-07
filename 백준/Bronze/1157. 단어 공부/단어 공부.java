@@ -20,7 +20,7 @@ public class Main {
             .stream()
             .filter(entry -> entry.getValue().equals(maxValue))
             .map(entry -> entry.getKey().toString())
-            .collect(Collectors.toList());
+            .collect(Collectors.toList()); //toList()로 작성해서 컴파일 오류 발생했었음. toList()는 Java 16부터 지원
 
         if(result.size() >= 2){
             System.out.println("?");
