@@ -25,7 +25,7 @@ public class Main {
         if(result.size() >= 2){
             System.out.println("?");
         }else if(result.size() == 1){
-            System.out.println(result.get(0).toUpperCase());
+            System.out.println(result.get(0));
         }
     }
 }
