@@ -1,5 +1,6 @@
 -- 조건 1. 대여시작일 : 2022년 09월 
 -- 조건 2. 대여기간 : 30일 이상이면 장기대여 아니면 단기대여
+-- DATEDIFF(END_DATE, START_DATE) 해당 함수에서 START_DATE가 포함되기 때문에 차이값에서 +1을 해줘야했음
 SELECT
 HISTORY_ID,
 CAR_ID,
