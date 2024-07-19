@@ -1,7 +1,15 @@
 -- 코드를 작성해주세요
-
+//방법 1
+//IFNULL : 해당 컬럼의 값이 null을 반환할 때, 다른 값으로 출력할 수 있도록 하는 함수
 SELECT 
 ROUND(AVG(IFNULL(LENGTH, 10)), 2)
+AS AVERAGE_LENGTH
+FROM 
+FISH_INFO
+
+//방법2
+SELECT 
+ROUND(AVG(CASE WHEN LENGTH IS NULL THEN 10 ELSE LENGTH END), 2)
 AS AVERAGE_LENGTH
 FROM 
 FISH_INFO
