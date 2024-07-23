@@ -1,3 +1,4 @@
+//방법 1
 SELECT 
 NAME
 FROM
@@ -9,3 +10,16 @@ DATETIME = (
     FROM 
     ANIMAL_INS
 )
+
+
+//방법 2
+SELECT 
+NAME
+FROM (
+    SELECT 
+    NAME
+    FROM
+    ANIMAL_INS 
+    ORDER BY DATETIME
+)
+WHERE ROWNUM = 1
